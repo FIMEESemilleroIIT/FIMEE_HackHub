@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIMEE HackHub - Hackatón Transformagob 2026</title>
+    
+    <!-- Meta Tags para Redes Sociales -->
+    <meta property="og:title" content="FIMEE HackHub - Hackatón Transformagob 2026">
+    <meta property="og:description" content="Portal oficial para estudiantes FIMEE UNICA. Participa en la Hackatón Nacional, forma tu equipo y resuelve los desafíos del Estado.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/FIMEESemilleroIIT/validacion-certificados/main/logounica.png">
+    
+    <!-- Fuentes: JetBrains Mono para consola y Inter para legibilidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animación de fondo (opcional, estilo Matrix sutil) -->
+    <div class="bg-grid"></div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/FIMEESemilleroIIT/validacion-certificados/main/logounica.png" alt="Logo UNICA" class="unica-logo">
+                <div class="fimee-text">
+                    <span class="fimee-title">C.F. FIMEE</span>
+                    <span class="unica-title">UNICA</span>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="typing-text">> FIMEE_HackHub<span class="cursor">_</span></h1>
+                <p class="subtitle">Comando central para la Hackatón Transformagob 2026</p>
+                
+                <div class="countdown-container">
+                    <div class="urgency-badge">⚠️ CIERRE DE INSCRIPCIONES: 10 DE JUNIO</div>
+                    <div id="countdown" class="countdown">
+                        <div class="time-box"><span id="days">00</span><span class="label">DÍAS</span></div>
+                        <div class="time-box"><span id="hours">00</span><span class="label">HRS</span></div>
+                        <div class="time-box"><span id="minutes">00</span><span class="label">MIN</span></div>
+                        <div class="time-box"><span id="seconds">00</span><span class="label">SEG</span></div>
+                    </div>
+                </div>
+
+                <div class="cta-group">
+                    <a href="https://chat.whatsapp.com/GpFkRhPMny6BIwnIPEsYI3" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <span class="icon">👥</span> BUSCAR EQUIPO
+                    </a>
+                    <a href="https://facilita.gob.pe/t/54361" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span class="icon">⚡</span> INSCRIBIRSE AHORA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="info-panel">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="icon">📅</span>
+                    <h3>Fechas</h3>
+                    <p>12 al 14 Junio</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">💻</span>
+                    <h3>Modalidad</h3>
+                    <p>100% Virtual</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">👥</span>
+                    <h3>Equipos</h3>
+                    <p>1 a 5 personas</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">💰</span>
+                    <h3>Costo</h3>
+                    <p>Gratuito</p>
+                </div>
+            </div>
+            <p class="info-desc">Desarrolla soluciones digitales para resolver desafíos reales del Estado peruano.</p>
+        </div>
+    </section>
+
+    <section class="how-to-participate">
+        <div class="container">
+            <h2 class="section-title">> ¿Cómo Participar?</h2>
+            <div class="flowchart">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <p>Revisa los 18 retos abajo y elige tu favorito.</p>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-decision">
+                    <h3>¿Ya tienes un equipo?</h3>
+                    <div class="decision-branches">
+                        <div class="branch no">
+                            <span class="branch-label">NO</span>
+                            <a href="https://chat.whatsapp.com/GpFkRhPMny6BIwnIPEsYI3" target="_blank" class="btn-flow">Unirse al WhatsApp FIMEE</a>
+                            <p class="branch-desc">Arma tu equipo hoy mismo con compañeros de la facultad.</p>
+                        </div>
+                        <div class="branch yes">
+                            <span class="branch-label">SÍ</span>
+                            <a href="https://facilita.gob.pe/t/54361" target="_blank" class="btn-flow accent">Inscripción Oficial</a>
+                            <p class="branch-desc">Registra a tu equipo en la plataforma del gobierno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges-dashboard" id="retos">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2 class="section-title">> Terminal de Desafíos</h2>
+                <div class="search-box">
+                    <span class="prompt">>_</span>
+                    <input type="text" id="searchInput" placeholder="Buscar: agua, IA, salud, UNICA...">
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn fimee-recom" data-filter="fimee">⚡ Recomendados FIMEE</button>
+                <button class="filter-btn" data-filter="universidad">🎓 Universidad</button>
+                <button class="filter-btn" data-filter="ciudad">🏙️ Ciudad</button>
+                <button class="filter-btn" data-filter="gobierno">🏛️ Gobierno</button>
+                <button class="filter-btn" data-filter="salud">🏥 Salud</button>
+                <button class="filter-btn" data-filter="medio-ambiente">🌿 Medio Ambiente</button>
+                <button class="filter-btn" data-filter="finanzas">💰 Finanzas</button>
+            </div>
+
+            <div class="results-info">
+                <p>Mostrando <span id="resultsCount">18</span> desafíos.</p>
+            </div>
+
+            <div class="challenges-grid" id="challengesContainer">
+                <!-- Las tarjetas se generan dinámicamente con JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-card">
+                <h2>¿Por qué participar?</h2>
+                <ul class="benefits-list">
+                    <li><span class="check">✓</span> <b>Constancia oficial:</b> Emitida por SGTD-PCM, CLAD y CAF.</li>
+                    <li><span class="check">✓</span> <b>Impacto real:</b> Posibilidad de pilotaje con el Estado.</li>
+                    <li><span class="check">✓</span> <b>CV de alto nivel:</b> Destaca en el mercado laboral tecnológico.</li>
+                    <li><span class="check">✓</span> <b>Networking:</b> Conecta con expertos e innovadores del sector.</li>
+                    <li><span class="check">✓</span> <b>Orgullo FIMEE:</b> Representa a nuestra facultad y a la UNICA a nivel nacional.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>C.F. FIMEE - UNICA</h4>
+                    <p>Facultad de Ingeniería Mecánica Eléctrica y Electrónica</p>
+                    <p>Universidad Nacional San Luis Gonzaga</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Oficiales</h4>
+                    <a href="https://www.gob.pe/institucion/pcm/informes-publicaciones/8190908-bases-de-la-hackaton-transformagob-2026" target="_blank">Bases de la Hackatón</a>
+                    <a href="https://www.gob.pe/hackatontransformagob2026" target="_blank">Página Informativa Estado</a>
+                    <a href="https://facilita.gob.pe/t/54361" target="_blank">Formulario de Inscripción</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>🚀 Iniciativa impulsada por el Centro Federado FIMEE para sus estudiantes.</p>
+                <p class="disclaimer">Página no oficial del gobierno. Consulta los enlaces oficiales para información vinculante.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-sticky-cta">
+        <a href="https://chat.whatsapp.com/GpFkRhPMny6BIwnIPEsYI3" target="_blank" rel="noopener noreferrer" class="btn-sticky secondary">
+            <span class="icon">👥</span> EQUIPO
+        </a>
+        <a href="https://facilita.gob.pe/t/54361" target="_blank" rel="noopener noreferrer" class="btn-sticky primary">
+            <span class="icon">⚡</span> INSCRIBIRSE
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
